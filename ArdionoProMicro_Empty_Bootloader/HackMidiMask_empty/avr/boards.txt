@@ -1,0 +1,25 @@
+leonardoNB.name=HackPad w/o Bootloader
+
+leonardoNB.upload.tool=arduino:avrdude
+leonardoNB.upload.maximum_size=32768
+leonardoNB.upload.maximum_data_size=2560
+
+leonardoNB.bootloader.tool=arduino:avrdude
+leonardoNB.bootloader.low_fuses=0xFF
+leonardoNB.bootloader.high_fuses=0xD7
+leonardoNB.bootloader.extended_fuses=0xCB
+leonardoNB.bootloader.unlock_bits=0x3F
+leonardoNB.bootloader.lock_bits=0x3F
+leonardoNB.bootloader.file=empty/empty.hex
+
+leonardoNB.build.mcu=atmega32u4
+leonardoNB.build.f_cpu=16000000L
+leonardoNB.build.vid=0x2340
+leonardoNB.build.pid=0x8030
+leonardoNB.build.usb_product="HackMidiMask HackPad"
+leonardoNB.build.board=AVR_MICRO
+leonardoNB.build.core=arduino:arduino
+leonardoNB.build.variant=arduino:micro
+leonardoNB.build.extra_flags={build.usb_flags}
+##############################################################
+
