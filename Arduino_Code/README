@@ -10,5 +10,5 @@ and you need to follow these steps:
 - install the Arduino library,
 - install the Arduino board library (Arduino Pro Micro without the bootloader)
 - upload the EEPROM intitalization Arduino code prepare the device.
-upload via programmer (with the support of an Arduino UNO) the HackPad code.
+- upload via programmer (with the help of an Arduino UNO) the HackPad code.
 
