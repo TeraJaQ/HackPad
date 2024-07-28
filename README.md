@@ -129,12 +129,12 @@ On both methods, the behavior of the potentiometer is defined in CUSTOM mode.
 The HackPad has been programmed in such a way that if it hears the same note and same midi channel coming from one of its pads, it will be lit if it hears this note active. Once it hears this note, it will switch off its LED accordingly.
 
 ## Midi TRS Jack
-The HackPad is also equipped with an analog midi output and midi through the tho 3.5 jack (located on the left side of the device). This allows us to use this controller with devices that only support this type of connection. The behavior can be selected, via the config menu and it is possibile to define this port as thru or not.
+The HackPad is also equipped with an analog midi output and midi through the two 3.5 jack (located on the left side of the device). This allows us to use this controller with devices that only support this type of connection. The behavior can be selected, via the config menu and it is possibile to define this port as thru or not.
 To connect a midi device via this port you need a TRS-MIDI Type A cable.
 Should you wish to use the HackPad exclusively via the TRS Midi Jack connection, it is necessary to power the HackPad via the micro-USB port with a power bank or with a classic USB charger (minimum 5v 1A, maximum 5V 3A).
 
 ## Panic!
-Don't worry, if some note keep on when you play and edit parameter keep on, Hold down the rotary encoder button to end all active notes.
+Don't worry, if some note keep on when you play and edit parameter, Hold down the rotary encoder button to end all active notes.
 
 ## Set the default main page
 In addition, is it possible to change the HackPad's main screen between Keyboard Mode or Custom Mode by holding down the rotary encoder button during power-up and set via this config menu page. These setting will be automatically stored within the device.
