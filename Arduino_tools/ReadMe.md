@@ -20,6 +20,7 @@ on Mac copy this folder in:
 - also install via Arduino IDE these library
 	- MIDIUSB (version 1.0.5)
 	- MIDI Library (version 4.3.1)
+- [download] (https://github.com/TeraJaQ/HackPad/tree/9d158dc6037a3cd8bcff9365b540cf754480ba56/Arduino_tools/Source%20code) the SorceCode folder from this repo
 - connect your Arduino UNO to your Arduino IDE
 - upload to your Arduino UNO the sketch called ** ArduinoISP **
 - connects your Arduino Pro Micro to the Arduino UNO through the MISO MOSI pins.
