@@ -12,11 +12,11 @@ HackPad is a handmade portable midi controller based on Arduino and works with a
 -	1 rotative potentiometer.
 -	Plug and play
 – USB bus-powered.
-- Additional analog Midi output via TRS Jack 3.5”
-- Additional analog MIDI input via TRS Jack 3.5"
+- Additional analog midi OUT via TRS Jack 3.5”
+- Additional analog midi IN via TRS Jack 3.5"
 - Compact and lightweight.
 - Two modes: Keyboard and Custom
-- Endless possibilities for controlling your DAW or synth/drum machine.
+- Endless possibilities for controlling your DAW or synth/drum machine/groove box.
 
 HackPad is made for any software synth/drum machine that support midi communication (USB and/or TRS Midi 3.5 jack), to be used as a controller.
 
