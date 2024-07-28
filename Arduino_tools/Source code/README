@@ -1,5 +1,20 @@
-In this section is possible to finde the arduino code for the HackPad.
-Before start uploading the HackPad, you need to know:
+In this section is possible to find two Arduino sorce code needed for the HackPad.
+Is also availble the bootloder for the Arduino Pro micro
+
+Before start uploading the HackPad, you need to know an to have:
+- an Arduino UNO and an Arduino Pro micro
+- have installed onn your computer the Arduino IDE 1.8.12
+- have installed the arduino library and hardware provided on this repo
+- uploaded * the Arduino As ISP * sketch on the Arduino UNO
+- connected the Arduino Pro micro via MISO MOSI pins to the Arduino UNO
+- select the custom bootloader from the Arduino IDE
+- burn the bootloader on the Arduino 
+- upload the EEPROM_init.ino sketch using your Arduino UNO as a Programmer
+- connect the Arduino pro Micro via USB with Arduino IDE
+- follow the instruction on the Serial Monitor to inizialize internal EEPROM and also the external EEPROM
+- from the Arduino IDE select the COM port of the Arduino UNO
+- upload the HackPad.ino sketch using your Arduino UNO as a Programmer
+
 The code use all the memory availbale of the Arduino Pro Micro. 
 To reduce the size of the code, I've decide to store all the words used for the display, in the internal EEPROM of the Arduino. 
 To allow that we need (only for the first boot) to initialize the Arduino board and also the exernal EEPROM that contain our settings with a specific Arduino code.
