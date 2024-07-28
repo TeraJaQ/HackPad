@@ -159,15 +159,15 @@ Also you need some hardware componets to start bulding the HackPad
 - N°2 rotary knob
 - N°2 TRS 3.5 jack female for pcb
 - some resitor ...
-- some diode 1N....
+- some diode 1N4148
 - N°1 external EEPROM AT24C256
 - N°1 optocoupler
 - N°16 rgb led common cathode
 - N°1 Sparkfun silicone button pad
 - N°1 push button for PCB
 - 12 M3 philips flat head screw
-- 8 M3 bolt
-- 4 cilider ...
+- 8 M3 PCB Nylon black plastic Phillips screw bolt
+- 4 PCB Nylon black plastic Phillips screw Female-Female pillar spacer ...
 - N°4 silicone feet
 - N°1 Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
 
