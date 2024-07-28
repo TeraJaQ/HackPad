@@ -1,1 +1,14 @@
-Here the Arduino code
+In this section is possible to finde the arduino code for the HackPad.
+Before start uploading the HackPad, you need to know:
+The code use all the memory availbale of the Arduino Pro Micro. 
+To reduce the size of the code, I've decide to store all the words used for the display, in the internal EEPROM of the Arduino. 
+To allow that we need (only for the first boot) to initialize the Arduino board and also the exernal EEPROM that contain our settings with a specific Arduino code.
+
+and you need to follow these steps:
+
+- install the Arduino version 1.8...
+- install the Arduino library,
+- install the Arduino board library (Arduino Pro Micro without the bootloader)
+- upload the EEPROM intitalization Arduino code prepare the device.
+upload via programmer (with the support of an Arduino UNO) the HackPad code.
+
