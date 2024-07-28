@@ -144,27 +144,39 @@ In addition, is it possible to calibrate the pressure sensitive of each pad by h
 
 # Build your Hackpad !!! #
 ## Hardware ##
-the hardware that you need to start bulding that device are
 
-- the HackPad pcbs
-- one arduino pro micro
-- two 16 x analog multiplexer
-- one SSD1306 oled display
-- one rotary encode with push button
-- one potentiometer 10k
-- two TRS 3.5 jack female for pcb
+### PCBs ###
+Here you can find the GERBER files of all the pcb boards used for this project
+
+### Components ###
+Also you need some hardware componets to start bulding the HackPad
+
+- N°1 Arduino Pro micro
+- N°2 16 x analog multiplexer
+- N°1 SSD1306 oled display
+- N°1 rotary encode with push button
+- N°1 potentiometer 10k
+- N°2 TRS 3.5 jack female for pcb
 - some resitor
 - dome diode
-- one eeprom AT24C256
-- one optocoupler
-- 16 rgb led common cathode
-- one Sperkfun silicon button pad
-- one push button for PCB
-- screw
-- bolt
+- N°1 external EEPROM AT24C256
+- N°1 optocoupler
+- N°16 rgb led common cathode
+- N°1 Sperkfun silicon button pad
+- N°1 push button for PCB
+- 12 screw
+- 4 bolt
+- 4 cilider
 - silicone feet
 - two knob
-- one Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
+- N°1 Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
+
+## Software ##
+##### Prerequisite:
+To upload the code in the Arduino board is needed to have Arduino IDE version 1.8. availabel here -->>>
+also you need to have download and copyed in the hardware folder the right bootloader and in the library folder the library needed.
+To upload the code you also need one Arduino UNO first of all to burn the Arduino Pro micro with an empty bootloader and also to upload the two Arduino code.
+
 
 
 ## License ##
