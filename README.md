@@ -7,6 +7,7 @@ This github holds Arduino source code, Arduino Pro Micro empty bootloader and GE
 HackPad is a handmade portable midi controller based on Arduino and works with any DAW (Digital Audio Workstation) or synthesizer/drum machine. HackPad makes a fast and tactile experience to control your DAW or Synth/Drum Machine.
 
 Key Features
+
 •	A 4x4 grid of 16 RGB LED back-lit pads.
 •	1 rotative potentiometer.
 •	Plug and play – USB bus-powered.
