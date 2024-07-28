@@ -1,22 +1,34 @@
-To prepare and upload the HackPad on the Arduino Pro micro you need:
+To prepare and upload the HackPad on the Arduino Pro micro you need to follow these steps:
 
-- install the Arduino IDE version 1.8.12
-- install the Arduino hardware (bootloader) provided in this repo
-- install the Arduino library provided in this repo
+- install Arduino IDE version 1.8.12
+- download and unzip the HackMidiMask_HackPad bootloader and ...
+
+on windows copy this folder in:
+*C:\Users\[YourUser]\Documents\Arduino\hardware*
+
+on Mac copy this folder in:
+*/Users/[YourUser]/Documents/Arduino/hardware*
+
+- download and unzip the Arduino library provided and ...
+
+on windows copy this folder in: 
+*C:\Users\[YourUser]\Documents\Arduino\libraries*
+
+on Mac copy this folder in: 
+*/Users/[YourUser]/Documents/Arduino/libraries*
+
 - also install via Arduino IDE these library
 	- MIDIUSB (version 1.0.5)
 	- MIDI Library (version 4.3.1)
-
-The steps are:
 - connect your Arduino UNO to your Arduino IDE
 - upload to your Arduino UNO the sketch called ** Arduino as ISP **
 - connects your Arduino Pro Micro to the Arduino UNO through the MISO MOSI pins.
-- burn the bootloader on the Arduino Pro Micro
+- burn the HackMidiMask_HackPad bootloader on the Arduino Pro Micro via the Arduino UNO 
 - upload the preliminary sketch using the command "Upload code via ISP"
-- connect the Arduino pro micro via usb and select the com 
-- open the serial monitor and press Enter
-- follow the instruction on the Serial Monitor to initialize the internal EEEPROM
-- follow the instruction on the Serial Monitor to initialize the external EEEPROM
+- connect the Arduino pro micro via usb and select the COM port 
+- open the Serial Monitor and press ENTER
+- follow the instruction on the Serial Monitor to initialize the internal EEPROM
+- follow the instruction on the Serial Monitor to initialize the external EEPROM
 - select the COM port of Arduino UNO board
 - upload the HackPad source code using the command "Upload code via ISP"
 Here you can find:
