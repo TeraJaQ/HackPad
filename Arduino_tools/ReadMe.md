@@ -21,8 +21,9 @@ on Mac copy this folder in:
 	- MIDIUSB (version 1.0.5)
 	- MIDI Library (version 4.3.1)
 - connect your Arduino UNO to your Arduino IDE
-- upload to your Arduino UNO the sketch called ** Arduino as ISP **
+- upload to your Arduino UNO the sketch called ** ArduinoISP **
 - connects your Arduino Pro Micro to the Arduino UNO through the MISO MOSI pins.
+  https://schou.dk/linux/arduino/isp/IMG_5841.JPG
 - burn the HackMidiMask_HackPad bootloader on the Arduino Pro Micro via the Arduino UNO 
 - upload the preliminary sketch using the command "Upload code via ISP"
 - connect the Arduino pro micro via usb and select the COM port 
