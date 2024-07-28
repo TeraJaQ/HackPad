@@ -1,12 +1,12 @@
-# HackPad
-## Open-source fully customizable midi controller based on Arduino
+# HackPad #
+## Open-source fully customizable midi controller based on Arduino ##
 ![3139e2a1-b84c-4670-9a91-8ea263ede413](https://github.com/TeraJaQ/HackPad/assets/20156060/f82f320f-b911-414d-b2c1-c404c2e3d3ac)
 
 This github holds Arduino source code, Arduino Pro Micro empty bootloader and GERBER files for the HackPad.
 
-HackPad is a handmade portable midi controller based on Arduino and works with any DAW (Digital Audio Workstation) or synthesizer/drum machine. HackPad makes a fast and tactile experience to control your DAW or Synth/Drum Machine.
+HackPad is a handmade portable midi controller based on Arduino and works with any DAW (Digital Audio Workstation) or synthesizer/drum machine/groove box. HackPad makes a fast and tactile experience to control your DAW or Synth/Drum Machine/Groove Box.
 
-## Key Features
+## Key Features ##
 - A 4x4 grid of 16 RGB LED back-lit pads.
 -	1 rotative potentiometer.
 -	Plug and play
@@ -73,10 +73,10 @@ All the pads will light up, green will represent the root notes and blue all the
 
 This image shows the display of the major scale with root notes C (Type B view) 
 
-Once the root note and scale have been chosen, it will be possible to select the 'keep on' option to keep the LEDs on and return to keyboard mode to continue changing the keyboard parameters (midi channel, octave, velocity…).
+Once the root note and scale have been chosen, it will be possible to select the **'keep on'** option to keep the LEDs on and return to keyboard mode to continue changing the keyboard parameters (midi channel, octave, velocity…).
 Now in the keyboard mode screen, the chosen root note is also displayed.
 
-## Custom Mode
+## Custom Mode ##
 In this mode, the midi settings for each button pad can be changed individually and is also possible to configure the parameter for the potentiometer.
  
 On this screen we will find the following items:
@@ -93,7 +93,7 @@ On this screen we will find the following items:
 -	**Save:** to save the configuration of 4x4 grid pads and the potentiometer into a specific bank number
 -	**Back:** return to the Keyboard mode.
 
-Selecting the Bank item and turning the rotary encoder will select a different bank, which will change the settings of the entire grid pad and the potentiometer. In addition, again using the Bank item, it is possible to select the ‘reset’ item which will set the pads as we left them in keyboard mode (including Chord finder mode).
+Selecting the **Bank** item and turning the rotary encoder will select a different bank, which will change the settings of the entire grid pad and the potentiometer. In addition, again using the Bank item, it is possible to select the ‘reset’ item which will set the pads as we left them in keyboard mode (including Chord finder mode).
 
 If **‘Button’** is chosen, the selected pad will light up blue. This will also be the case when modifying an other parameter to highlight which button we are making changes on.
 Selecting the **‘Copy’** item, the selected pad will be used as a reference and will also light up red to indicate where it will be copied. Turning the rotary encoder will select the destination pad and pressing the rotary encoder button will confirm copying.
