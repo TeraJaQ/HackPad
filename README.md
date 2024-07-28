@@ -156,28 +156,26 @@ Also you need some hardware componets to start bulding the HackPad
 - N°1 SSD1306 oled display
 - N°1 rotary encode with push button
 - N°1 potentiometer 10k
+- N°2 rotary knob
 - N°2 TRS 3.5 jack female for pcb
-- some resitor
-- dome diode
+- some resitor ...
+- some diode 1N....
 - N°1 external EEPROM AT24C256
 - N°1 optocoupler
 - N°16 rgb led common cathode
-- N°1 Sperkfun silicon button pad
+- N°1 Sparkfun silicone button pad
 - N°1 push button for PCB
-- 12 screw
-- 4 bolt
-- 4 cilider
-- silicone feet
-- two knob
+- 12 M3 philips flat head screw
+- 8 M3 bolt
+- 4 cilider ...
+- N°4 silicone feet
 - N°1 Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
 
 ## Software ##
 ##### Prerequisite:
-To upload the code in the Arduino board is needed to have Arduino IDE version 1.8. availabel here -->>>
-also you need to have download and copyed in the hardware folder the right bootloader and in the library folder the library needed.
-To upload the code you also need one Arduino UNO first of all to burn the Arduino Pro micro with an empty bootloader and also to upload the two Arduino code.
-
-
+To upload the code in the Arduino board is needed to have Arduino IDE version 1.8.12 availabel here -->>>
+also you need to have download and copyed in the hardware folder the provided HackMidiMask_HackPad bootloader and in the library folder the library needed.
+To upload the code you also need one Arduino UNO first of all to burn the Arduino Pro micro with an HackMidiMask_HackPad bootloader and also to upload the two Arduino code.
 
 ## License ##
 
