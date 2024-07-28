@@ -9,7 +9,7 @@ on windows copy this folder in:
 on Mac copy this folder in:
 */Users/[YourUser]/Documents/Arduino/hardware*
 
-- download and unzip the Arduino library provided and ...
+- [download](https://github.com/TeraJaQ/HackPad/blob/3e7e7be7058b5257141bf90c8c767acaf4840632/Arduino_tools/Libraries.zip) and unzip the Arduino library provided and ...
 
 on windows copy this folder in: 
 *C:\Users\[YourUser]\Documents\Arduino\libraries*
