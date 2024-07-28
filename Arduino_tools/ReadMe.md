@@ -25,7 +25,7 @@ on Mac copy this folder in:
 - connects your Arduino Pro Micro to the Arduino UNO through the MISO MOSI pins.
   https://schou.dk/linux/arduino/isp/IMG_5841.JPG
 - burn the HackMidiMask_HackPad bootloader on the Arduino Pro Micro via the Arduino UNO 
-- upload the preliminary sketch using the command "Upload code via ISP"
+- upload the [preliminary](https://github.com/TeraJaQ/HackPad/tree/855d2052dcc0c273327fdbb76474b73e08c6ae10/Arduino_tools/Source%20code/EEPROM_init) sketch using the command "Upload code via ISP"
 - connect the Arduino pro micro via usb and select the COM port 
 - open the Serial Monitor and press ENTER
 - follow the instruction on the Serial Monitor to initialize the internal EEPROM
