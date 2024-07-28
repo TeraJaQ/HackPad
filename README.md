@@ -25,6 +25,17 @@ HackPad is made for any software synth/drum machine that support midi communicat
 3.	0.96” OLED display to manage the device.
 4.	4x4 Pad grid.
 
+<img width="885" alt="Schermata 2024-07-28 alle 16 05 57" src="https://github.com/user-attachments/assets/3c1fb54d-8885-4022-872c-b09b388b6784">
+
+5.	Micro USB Socket (Midi IN & OUT).
+
+<img width="885" alt="Schermata 2024-07-28 alle 16 07 17" src="https://github.com/user-attachments/assets/746b44ee-2636-46d4-9566-5c7bfa3d480f">
+
+
+
+6.	Jack 3.5 Socket (Analog TRS Midi OUT) and Jack 3.5 Socket (Analog TRS Midi IN) ... *image not updated*.
+7.	External EEPROM – AT24C254 (where is possible to store the configurations)
+
 The body of this controller consists of multiple overlapping PCB boards, making it very robust.
 
 ## Modes
@@ -33,12 +44,15 @@ The modes available are:
 -	**Keyboard.**
 -	**Custom.**
 
-more over, if we boot the device by keeping pressed the totary encoder, you can access to a config page, where is possible to select the first menu page (keyboard or custom), calibrate the pressure of each pad and the behavior of the analog midi (THRU or not). When you exit from this page all value are stored.
+more over, if we boot the device by keeping pressed the totary encoder, you can access to a config page, where is possible to select the first menu page (keyboard or custom), calibrate the sensitive pressure of each pad and the behavior of the analog midi (THRU or not). When you exit from this page all value will be stored in the EEPROM.
 
 ## Keyboard Mode
+<img width="884" alt="Schermata 2024-07-28 alle 16 10 23" src="https://github.com/user-attachments/assets/62b2c31f-ee86-41c0-8080-e6e1394dfa2f">
+
 **Keyboard mode** allows you to play your HackPad’s grid as a chromatic keyboard. The lowest pitch is at the bottom, with the highest at the top. The pad grid is configured to play an entire octave of notes and the first four notes of the next octave. 
- 
-### Arrangement of notes in Keyboard mode                                  
+
+<img width="888" alt="Schermata 2024-07-28 alle 16 09 10" src="https://github.com/user-attachments/assets/3b03f037-98b0-435a-b4b1-ef6952af4b3c">
+                                 
 Through the OLED screen and the rotary encoder, it is possible:
 -	**Midi CH:** to set Midi Channel.
 -	**Octave:** to choose reference octave.
@@ -49,36 +63,38 @@ Through the OLED screen and the rotary encoder, it is possible:
 -	**Chord finder:** to enable a scale tutorial.
 -	**Back:** to go on the “Custom Mode”.
 
- 
-Keyboard Mode menu
 ## Sub-menu --> Chord finder
-This function, via the backlit pads, will allow us to activate a kind of tutorial on how to play different types of scales (50 in all) via the grid pad. 
+From this menu, you can enable this function called *'Chord finder'*. This function, via the backlit pads, will allow us to activate a kind of tutorial on how to play different types of scales (50 in all). 
+<img width="890" alt="Schermata 2024-07-28 alle 15 47 28" src="https://github.com/user-attachments/assets/11096679-a128-43ea-820b-4632bb9e8114">
 
- 
-### Chord finder
 Through the OLED screen and the rotary encoder, it is possible to set:
--	**The root note.
-- The scale.
--	The Octave.
--	Two different types of view/play with the scale (**Type A** or **Type B**).
+-	**The root note.**
+- **The scale.**
+-	**The Octave.** ... *image not updated*.
+-	**Two different types of view/play with the scale (**Type A** or **Type B**).
 These two different types of view/play consist of:
 #### Type A (didactics method)
-The button pad grid turns on the led green for the root note and blue for all other notes in the scale. This helps us to learn how the notes of the chord are arranged on the 4x4 grid pad.
+- **keep on** to go back in the previous menu and keep led and pad behaviours
+- **Back** to go back in the previous menu, turn off leds and reset the chromatic keyboard mode.
 
-This image shows the display of the major scale with root notes C (Type A view) 
+when this setting is enabled, the button pad grid turns on the led green for the root note and blue for all other notes in the scale. This helps us to learn how the notes of the chord are arranged on the 4x4 grid pad.
+
+<img width="886" alt="Schermata 2024-07-28 alle 16 04 26" src="https://github.com/user-attachments/assets/84ba0672-9b10-4779-aff1-24e130b4d071">
+
 
 #### Type B (compact view)
 All the pads will light up, green will represent the root notes and blue all the remaining notes of the scale. All notes not useful for the selected scale will be skipped. This will allow us to have more octaves available to move around on.
  
-
-This image shows the display of the major scale with root notes C (Type B view) 
+<img width="889" alt="Schermata 2024-07-28 alle 15 57 23" src="https://github.com/user-attachments/assets/4b9f920a-b056-4f96-9735-3772822b761c">
 
 Once the root note and scale have been chosen, it will be possible to select the **'keep on'** option to keep the LEDs on and return to keyboard mode to continue changing the keyboard parameters (midi channel, octave, velocity…).
 Now in the keyboard mode screen, the chosen root note is also displayed.
 
 ## Custom Mode ##
 In this mode, the midi settings for each button pad can be changed individually and is also possible to configure the parameter for the potentiometer.
- 
+
+ <img width="885" alt="Schermata 2024-07-28 alle 15 58 25" src="https://github.com/user-attachments/assets/c65d7b32-646f-4093-b448-d9d4747682d5">
+
 On this screen we will find the following items:
 -	**Bank:** where are stored the configuration for the 4x4 grid pad and for the potentiometer (is it possible to store 201 Bank).
 -	**Btn / Pot:** where you can select a pad or potentiometer to be edit.
@@ -93,31 +109,31 @@ On this screen we will find the following items:
 -	**Save:** to save the configuration of 4x4 grid pads and the potentiometer into a specific bank number
 -	**Back:** return to the Keyboard mode.
 
-Selecting the **Bank** item and turning the rotary encoder will select a different bank, which will change the settings of the entire grid pad and the potentiometer. In addition, again using the Bank item, it is possible to select the ‘reset’ item which will set the pads as we left them in keyboard mode (including Chord finder mode).
+Selecting the *Bank* item and turning the rotary encoder will select a different bank, which will change the settings of the entire grid pad and the potentiometer. In addition, again using the Bank item, it is possible to select the ‘reset’ item which will set the pads as we left them in keyboard mode (including Chord finder mode).
 
-If **‘Button’** is chosen, the selected pad will light up blue. This will also be the case when modifying an other parameter to highlight which button we are making changes on.
-Selecting the **‘Copy’** item, the selected pad will be used as a reference and will also light up red to indicate where it will be copied. Turning the rotary encoder will select the destination pad and pressing the rotary encoder button will confirm copying.
+If *‘Button’* is chosen, the selected pad will light up blue. This will also be the case when modifying an other parameter to highlight which button we are making changes on.
+Selecting the *‘Copy’* item, the selected pad will be used as a reference and will also light up red to indicate where it will be copied. Turning the rotary encoder will select the destination pad and pressing the rotary encoder button will confirm copying.
 
-Through the **‘Swap’** item it will be possible to move the configuration of a button to another position on the grid pad.
+Through the *‘Swap’* item it will be possible to move the configuration of a button to another position on the grid pad.
 
-The **‘Link’** function will allow the action performed on one pad to be linked to another key on the grid pad. The second key can be also linked to a different key.
+The *‘Link’* function will allow the action performed on one pad to be linked to another key on the grid pad. The second key can be also linked to a different key.
 
-As soon as we make a change, the **‘Save’** item will be highlighted to remind us to save the settings (if we wish to do so).
-By selecting **‘Save’**, we can decide to save to the same bank where we are working on, or alternatively save to a different bank (the HackPad has 201 banks available).
+As soon as we make a change, the *‘Save’* item will be highlighted to remind us to save the settings (if we wish to do so).
+By selecting *‘Save’*, we can decide to save to the same bank where we are working on, or alternatively save to a different bank (the HackPad has 201 banks available).
 
 ## Potentiometer
 On both methods, the behavior of the potentiometer is defined in CUSTOM mode.
 
 ## Midi Output Lighting
-The HackPad has been programmed in such a way that if it hears the same note coming from one of its pads, it will be lit if it hears this note active. Once it hears this note, it will switch off its LED accordingly.
+The HackPad has been programmed in such a way that if it hears the same note and same midi channel coming from one of its pads, it will be lit if it hears this note active. Once it hears this note, it will switch off its LED accordingly.
 
 ## Midi TRS Jack
 The HackPad is also equipped with an analog midi output and midi through the tho 3.5 jack (located on the left side of the device). This allows us to use this controller with devices that only support this type of connection. The behavior can be selected, via the config menu and it is possibile to define this port as thru or not.
 To connect a midi device via this port you need a TRS-MIDI Type A cable.
 Should you wish to use the HackPad exclusively via the TRS Midi Jack connection, it is necessary to power the HackPad via the micro-USB port with a power bank or with a classic USB charger (minimum 5v 1A, maximum 5V 3A).
 
-## Panic
-Hold down the rotary encoder button to end all active notes.
+## Panic!
+Don't worry, if some note keep on when you play and edit parameter keep on, Hold down the rotary encoder button to end all active notes.
 
 ## Set the default main page
 In addition, is it possible to change the HackPad's main screen between Keyboard Mode or Custom Mode by holding down the rotary encoder button during power-up and set via this config menu page. These setting will be automatically stored within the device.
@@ -125,11 +141,11 @@ In addition, is it possible to change the HackPad's main screen between Keyboard
 ## Calibration of the pad
 In addition, is it possible to calibrate the pressure sensitive of each pad by holding down the rotary encoder button during power-up and set via this config menu page. These setting will be automatically stored within the device.
 
-# Make the Hackpad #
+# Build your Hackpad !!! #
 ## Hardware ##
 the hardware that you need to start bulding that device are
 
-- the pcb's
+- the HackPad pcbs
 - one arduino pro micro
 - two 16 x analog multiplexer
 - one SSD1306 oled display
@@ -147,6 +163,7 @@ the hardware that you need to start bulding that device are
 - bolt
 - silicone feet
 - two knob
+- one Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
 
 
 ## License ##
