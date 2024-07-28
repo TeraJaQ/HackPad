@@ -125,6 +125,29 @@ In addition, is it possible to change the HackPad's main screen between Keyboard
 ## Calibration of the pad
 In addition, is it possible to calibrate the pressure sensitive of each pad by holding down the rotary encoder button during power-up and set via this config menu page. These setting will be automatically stored within the device.
 
+# Make the Hackpad #
+## Hardware ##
+the hardware that you need to start bulding that device are
+
+- the pcb's
+- one arduino pro micro
+- two 16 x analog multiplexer
+- one SSD1306 oled display
+- one rotary encode with push button
+- one potentiometer 10k
+- two TRS 3.5 jack female for pcb
+- some resitor
+- dome diode
+- one eeprom AT24C256
+- one optocoupler
+- 16 rgb led common cathode
+- one Sperkfun silicon button pad
+- one push button for PCB
+- screw
+- bolt
+- silicone feet
+- two knob
+
 
 ## License ##
 
