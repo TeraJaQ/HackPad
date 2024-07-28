@@ -1,6 +1,7 @@
 To prepare and upload the HackPad on the Arduino Pro micro you need:
 
 - install the Arduino IDE version 1.8.12
+- install the Arduino hardware (bootloader) provided in this repo
 - install the Arduino library provided in this repo
 - also install via Arduino IDE these library
 	- MIDIUSB (version 1.0.5)
