@@ -8,25 +8,33 @@ HackPad is a handmade portable midi controller based on Arduino and works with a
 
 Key Features
 
-•	A 4x4 grid of 16 RGB LED back-lit pads.
-•	1 rotative potentiometer.
-•	Plug and play – USB bus-powered.
-•	Additional analog Midi output via TRS Jack 3.5”
-•	Additional analog MIDI input via TRS Jack 3.5"
-•	Compact and lightweight.
-•	Two modes: Keyboard and Custom
-•	Endless possibilities for controlling your DAW or synth/drum machine.
+- A 4x4 grid of 16 RGB LED back-lit pads.
+-	1 rotative potentiometer.
+-	Plug and play
+– USB bus-powered.
+- Additional analog Midi output via TRS Jack 3.5”
+- Additional analog MIDI input via TRS Jack 3.5"
+- Compact and lightweight.
+- Two modes: Keyboard and Custom
+- Endless possibilities for controlling your DAW or synth/drum machine.
 
 HackPad is made for any software synth/drum machine that support midi communication (USB and/or TRS Midi 3.5 jack), to be used as a controller.
+
 ![image](https://github.com/TeraJaQ/HackPad/assets/20156060/a0b1fb45-4ec8-4103-9f4e-53aea013592d)
 1.	Navigation Rotary Encoder with push button.
 2.	Potentiometer.
 3.	0.96” OLED display to manage the device.
 4.	4x4 Pad grid.
+
 Modes
-From the OLED screen with the support of the Rotary Encoder, is possible to choose two different modes of use. The modes available are:
+
+From the OLED screen with the support of the Rotary Encoder, is possible to choose two different modes of use.
+The modes available are:
 -	Keyboard.
 -	Custom.
+
+more over, if we boot the device by keeping pressed the totary encoder, you can access to a config page, where is possible to select the first menu page (keyboard or custom), calibrate the pressure of each pad and the behavior of the analog midi (THRU or not). When you exit from this page all value are stored.
+
 Keyboard Mode
 Keyboard mode allows you to play your HackPad’s grid as a chromatic keyboard. The lowest pitch is at the bottom, with the highest at the top. The pad grid is configured to play an entire octave of notes and the first four notes of the next octave. 
  
@@ -61,13 +69,11 @@ This image shows the display of the major scale with root notes C (Type A view)
 
 
 
-
-
-
 Type B (compact view). All the pads will light up, green will represent the root notes and blue all the remaining notes of the scale. All notes not useful for the selected scale will be skipped. This will allow us to have more octaves available to move around on.
  
 This image shows the display of the major scale with root notes C (Type B view) 
 Once the root note and scale have been chosen, it will be possible to select the 'keep on' option to keep the LEDs on and return to keyboard mode to continue changing the keyboard parameters (midi channel, octave, velocity…). Now in the keyboard mode screen, the chosen root note is also displayed.
+
 Custom Mode
 In this mode, the midi settings for each button pad can be changed individually and is also possible to configure the parameter for the potentiometer.
  
@@ -84,21 +90,38 @@ On this screen we will find the following items:
 -	Link: (to link one pad to another) this will allow us to play the two pads simultaneously (it is also possible to link this second pad to another … and so on).
 -	Save: to save the configuration of 4x4 grid pads and the potentiometer into a specific bank number
 -	Back: return to the Keyboard mode.
+
 Selecting the Bank item and turning the rotary encoder will select a different bank, which will change the settings of the entire grid pad and the potentiometer. In addition, again using the Bank item, it is possible to select the ‘reset’ item which will set the pads as we left them in keyboard mode (including Chord finder mode).
+
 If ‘Button’ is chosen, the selected pad will light up blue. This will also be the case when modifying an other parameter to highlight which button we are making changes on.
 Selecting the ‘Copy’ item, the selected pad will be used as a reference and will also light up red to indicate where it will be copied. Turning the rotary encoder will select the destination pad and pressing the rotary encoder button will confirm copying.
+
 Through the ‘Swap’ item it will be possible to move the configuration of a button to another position on the grid pad.
+
 The ‘Link’ function will allow the action performed on one pad to be linked to another key on the grid pad. The second key can be also linked to a different key.
+
 As soon as we make a change, the ‘Save’ item will be highlighted to remind us to save the settings (if we wish to do so).
-By selecting ‘Save’, we can decide to save to the same bank where we are working on or alternatively save to a different bank (the HackPad has 201 banks available).
+By selecting ‘Save’, we can decide to save to the same bank where we are working on, or alternatively save to a different bank (the HackPad has 201 banks available).
+
 Potentiometer
+
 On both methods, the behavior of the potentiometer is defined in CUSTOM mode.
+
 Midi Output Lighting
+
 The HackPad has been programmed in such a way that if it hears the same note coming from one of its pads, it will be lit if it hears this note active. Once it hears this note, it will switch off its LED accordingly.
+
 Midi TRS Jack
-The HackPad is also equipped with an analog midi output through the 3.5 jack (located on the left side of the device). This allows us to use this controller with devices that only support this type of connection. The behavior of this port is thru, which will allow us to send midi messages from the HackPad's USB port to this analogue midi port. To connect a midi device via this port you need a TRS-MIDI Type B cable.
+
+The HackPad is also equipped with an analog midi output and midi through the tho 3.5 jack (located on the left side of the device). This allows us to use this controller with devices that only support this type of connection. The behavior can be selected, via the config menu and it is possibile to define this port as thru or not.
+To connect a midi device via this port you need a TRS-MIDI Type A cable.
 Should you wish to use the HackPad exclusively via the TRS Midi Jack connection, it is necessary to power the HackPad via the micro-USB port with a power bank or with a classic USB charger (minimum 5v 1A, maximum 5V 3A).
+
 Panic
+
 Hold down the rotary encoder button to end all active notes.
+
 Change the default main page
 In addition, it is possible to change the HackPad's main screen between Keyboard Mode or Custom Mode by holding down the rotary encoder button during power-up. This setting will be automatically stored within the device.
+
+Calibration of the pad
