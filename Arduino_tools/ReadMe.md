@@ -1,7 +1,7 @@
 To prepare and upload the HackPad on the Arduino Pro micro you need to follow these steps:
 
 - install Arduino IDE version 1.8.12
-- [download][https://github.com/TeraJaQ/HackPad/blob/98fc1aba79c6c5eab6331f7ece1e48f16bbd9735/Arduino_tools/HackMidiMask_HackPad.zip] and unzip the HackMidiMask_HackPad bootloader and ...
+- [download](https://github.com/TeraJaQ/HackPad/blob/98fc1aba79c6c5eab6331f7ece1e48f16bbd9735/Arduino_tools/HackMidiMask_HackPad.zip) and unzip the HackMidiMask_HackPad bootloader and ...
 
 on windows copy this folder in:
 *C:\Users\[YourUser]\Documents\Arduino\hardware*
