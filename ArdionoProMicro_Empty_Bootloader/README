@@ -1,7 +1,0 @@
-the empty bootloader for Arduino PRO Micro
-
-on windows copy this folder in:
-C:\Users\<YourUser>\Documents\Arduino\hardware
-
-on Mac copy this folder in:
-....
