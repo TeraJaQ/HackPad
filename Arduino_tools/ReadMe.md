@@ -31,10 +31,5 @@ on Mac copy this folder in:
 - follow the instruction on the Serial Monitor to initialize the internal EEPROM
 - follow the instruction on the Serial Monitor to initialize the external EEPROM
 - select the COM port of Arduino UNO board
-- upload the HackPad source code using the command "Upload code via ISP"
-Here you can find:
-
-- the empty bootloader
-- the initialization EEPROM arduino code
-- the HackPad - arduino source code
+- upload the HackPad source code using the command "Upload code via Programmer"
 
