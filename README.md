@@ -8,7 +8,7 @@ This github holds Arduino source code, Arduino Pro Micro empty bootloader and GE
 HackPad is a handmade portable midi controller based on Arduino and works with any DAW (Digital Audio Workstation) or synthesizer/drum machine/groove box. HackPad makes a fast and tactile experience to control your DAW or Synth/Drum Machine/Groove Box.
 
 ## Key Features ##
-- A 4x4 grid of 16 RGB LED back-lit pads.
+- A 4x4 grid of 16 RGB LED back-lit pressure sensitive pads.
 -	1 rotative potentiometer.
 -	Plug and play
 – USB bus-powered.
@@ -18,7 +18,7 @@ HackPad is a handmade portable midi controller based on Arduino and works with a
 - Two modes: Keyboard and Custom
 - Endless possibilities for controlling your DAW or synth/drum machine/groove box.
 
-HackPad is made for any software synth/drum machine that support midi communication (USB and/or TRS Midi 3.5 jack), to be used as a controller.
+HackPad is made for any software synth/drum machine/groove box that support midi communication (USB and/or TRS Midi 3.5 jack), to be used as a controller.
 
 ![image](https://github.com/TeraJaQ/HackPad/assets/20156060/a0b1fb45-4ec8-4103-9f4e-53aea013592d)
 1.	Navigation Rotary Encoder with push button.
@@ -50,7 +50,7 @@ more over, if we boot the device by keeping pressed the totary encoder, you can 
 ## Keyboard Mode
 <img width="884" alt="Schermata 2024-07-28 alle 16 10 23" src="https://github.com/user-attachments/assets/62b2c31f-ee86-41c0-8080-e6e1394dfa2f">
 
-**Keyboard mode** allows you to play your HackPad’s grid as a chromatic keyboard. The lowest pitch is at the bottom, with the highest at the top. The pad grid is configured to play an entire octave of notes and the first four notes of the next octave. 
+Allows you to play your HackPad’s grid as a chromatic keyboard. The lowest pitch is at the bottom, with the highest at the top. The pad grid is configured to play an entire octave of notes and the first four notes of the next octave. 
 
 <img width="888" alt="Schermata 2024-07-28 alle 16 09 10" src="https://github.com/user-attachments/assets/3b03f037-98b0-435a-b4b1-ef6952af4b3c">
                                  
@@ -151,30 +151,29 @@ Here you can find the GERBER files of all the pcb boards used for this project
 ### Components ###
 Also you need some hardware componets to start bulding the HackPad
 
-- N°1 Arduino Pro micro
-- N°2 CD74HC4067 (16 Channel Analog Multiplexer) 
-- N°1 0,96 inch OLED display SSD1306 White
-- N°1 rotary encode with push button
-- N°1 potentiometer 10k
-- N°2 rotary knob
+- N°1 Arduino Pro micro 5v 16MHz [link](https://it.aliexpress.com/item/1005005074893953.html?spm=a2g0o.order_list.order_list_main.160.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°2 CD74HC4067 (16 Channel Analog Multiplexer) [link](https://it.aliexpress.com/item/1005003157392356.html?spm=a2g0o.order_list.order_list_main.155.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°1 0,96 inch OLED display SSD1306 or SH1106 White [link](https://www.christians-shop.de/096-OLED-Display-128-x-64-SH1106-I2C-IIC-white)
+- N°1 rotary encoder with push button EC11
+- N°1 linear rotary potentiometer 10k [link](https://it.aliexpress.com/item/1005004885785726.html?spm=a2g0o.order_list.order_list_main.180.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°2 rotary knob [link](https://it.aliexpress.com/item/32997307714.html?spm=a2g0o.order_list.order_list_main.261.46733696P8Ga6q&gatewayAdapt=glo2ita)
 - N°2 TRS 3.5 jack female for pcb
 - some resitor ...
-- some diode 1N4148
-- N°1 external EEPROM AT24C256
-- N°1 optocoupler
-- N°16 rgb led common cathode
-- N°1 Sparkfun silicone button pad
+- some diode 1N4148 [link](https://it.aliexpress.com/item/32660088529.html?spm=a2g0o.order_list.order_list_main.35.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°1 external EEPROM AT24C256 [link](https://it.aliexpress.com/item/1005003173044914.html?spm=a2g0o.order_list.order_list_main.135.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°1 optocoupler 6N138 [link](https://it.aliexpress.com/item/32843461925.html?spm=a2g0o.order_list.order_list_main.145.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°16 rgb led common cathode [link](https://it.aliexpress.com/item/1005001841011607.html?spm=a2g0o.order_list.order_list_main.165.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°1 Sparkfun silicone button pad [link](https://www.sparkfun.com/products/7835)
 - N°1 push button for PCB
-- 12 M3 philips flat head screw
+- 12 M3 philips flat head screw Black [link](https://it.aliexpress.com/item/1005004510575982.html?spm=a2g0o.order_list.order_list_main.125.46733696P8Ga6q&gatewayAdapt=glo2ita)
 - N°8 M3 PCB Nylon black plastic Phillips screw bolt
-- N°4 PCB Nylon black plastic Phillips screw Female-Female pillar spacer ...
+- N°4 PCB Nylon black plastic Phillips screw Female-Female pillar spacer ... [link](https://it.aliexpress.com/item/32976004197.html?spm=a2g0o.order_list.order_list_main.190.46733696P8Ga6q&gatewayAdapt=glo2ita)
 - N°4 silicone feet
 - N°1 Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
 
 ## Software ##
 ##### Prerequisite:
-To upload the code in the Arduino board is needed to have Arduino IDE version 1.8.12 availabel here -->>>
-also you need to have download and copyed in the hardware folder the provided HackMidiMask_HackPad bootloader and in the library folder the library needed.
+To upload the code in the Arduino board is needed to have Arduino IDE version 1.8.12 (for [Mac](https://downloads.arduino.cc/arduino-1.8.12-macosx.zip) for [Win](https://downloads.arduino.cc/arduino-1.8.12-windows.zip) ) also you need to have download and copied in the hardware folder the provided [HackMidiMask_HackPad](https://github.com/TeraJaQ/HackPad/blob/3560372e49aeeb965b1748fd1811149483b62c2a/Arduino_tools/HackMidiMask_HackPad.zip) bootloader and in the library folder the [library](https://github.com/TeraJaQ/HackPad/blob/3560372e49aeeb965b1748fd1811149483b62c2a/Arduino_tools/Libraries.zip) needed.
 To upload the code you also need one Arduino UNO first of all to burn the Arduino Pro micro with an HackMidiMask_HackPad bootloader and also to upload the two Arduino code.
 
 ## License ##
@@ -183,7 +182,7 @@ Copyright (C) 2024 Jacques Fargion <terajack@gmail.com>
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
-version 2, as published by the Free Software Foundation.
+version 3, as published by the Free Software Foundation.
 
 This program is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -191,6 +190,6 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 General Public License version 2 for more details.
 
 You should have received a copy of the GNU General Public License
-version 2 along with this program; if not, write to the Free
+version 3 along with this program; if not, write to the Free
 Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 MA 02110-1301, USA.
