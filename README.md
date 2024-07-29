@@ -152,8 +152,8 @@ Here you can find the GERBER files of all the pcb boards used for this project
 Also you need some hardware componets to start bulding the HackPad
 
 - N°1 Arduino Pro micro
-- N°2 16 x analog multiplexer
-- N°1 SSD1306 oled display
+- N°2 CD74HC4067 (16 Channel Analog Multiplexer) 
+- N°1 0,96 inch OLED display SSD1306 White
 - N°1 rotary encode with push button
 - N°1 potentiometer 10k
 - N°2 rotary knob
@@ -166,8 +166,8 @@ Also you need some hardware componets to start bulding the HackPad
 - N°1 Sparkfun silicone button pad
 - N°1 push button for PCB
 - 12 M3 philips flat head screw
-- 8 M3 PCB Nylon black plastic Phillips screw bolt
-- 4 PCB Nylon black plastic Phillips screw Female-Female pillar spacer ...
+- N°8 M3 PCB Nylon black plastic Phillips screw bolt
+- N°4 PCB Nylon black plastic Phillips screw Female-Female pillar spacer ...
 - N°4 silicone feet
 - N°1 Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
 
