@@ -165,7 +165,7 @@ Also you need some hardware componets to start bulding the HackPad
 - N°16 rgb led common cathode [link](https://it.aliexpress.com/item/1005001841011607.html?spm=a2g0o.order_list.order_list_main.165.46733696P8Ga6q&gatewayAdapt=glo2ita)
 - N°1 Sparkfun silicone button pad [link](https://www.sparkfun.com/products/7835)
 - N°1 push button for PCB
-- 12 M3 philips flat head screw Black [link](https://it.aliexpress.com/item/1005004510575982.html?spm=a2g0o.order_list.order_list_main.125.46733696P8Ga6q&gatewayAdapt=glo2ita)
+- N°12 M3 philips flat head screw Black [link](https://it.aliexpress.com/item/1005004510575982.html?spm=a2g0o.order_list.order_list_main.125.46733696P8Ga6q&gatewayAdapt=glo2ita)
 - N°8 M3 PCB Nylon black plastic Phillips screw bolt
 - N°4 PCB Nylon black plastic Phillips screw Female-Female pillar spacer ... [link](https://it.aliexpress.com/item/32976004197.html?spm=a2g0o.order_list.order_list_main.190.46733696P8Ga6q&gatewayAdapt=glo2ita)
 - N°4 silicone feet
