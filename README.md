@@ -146,7 +146,7 @@ In addition, is it possible to calibrate the pressure sensitive of each pad by h
 ## Hardware ##
 
 ### PCBs ###
-Here you can find the GERBER files of all the pcb boards used for this project
+[Here](https://github.com/TeraJaQ/HackPad/tree/d808f625406d060a4fe85b35d44777ac2a44a53d/PCB) you can find the GERBER files of all the pcb boards used for this project
 
 ### Components ###
 Also you need some hardware componets to start bulding the HackPad
