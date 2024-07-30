@@ -1,5 +1,5 @@
 # PCB #
-Inside this folder, is possible to find the gerber file of all pcb used to build the HackPad ... as soon as possible i upload all the pcb files
+Inside this folder, is possible to find the gerber file of all pcb used to build the HackPad ... as soon as possible I upload all the pcb files
 ## TOP ##
 ![image](https://github.com/user-attachments/assets/e288fca4-f697-4060-9b64-c1b76c64db1e)
 ## MIDDLE FRAME ##
