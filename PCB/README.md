@@ -1,5 +1,27 @@
 # PCB #
-Inside this folder, is possible to find the gerber file of all pcb used to build the HackPad ... as soon as possible I upload all the pcb files
+Inside this folder, is possible to find the gerber file of all pcb used to build the HackPad ... as soon as possible I upload all the updated! pcb files
+## PART LIST ##
+| Qt.  | Item |
+| ------------- | ------------- |
+| 1  | Arduino Pro Micro 16Mhz  |
+| 1  | 0.96" SSD1306 I2C Display  |
+| 1  | Rotary encoder w btn  |
+| 1  | 10K rotative potentiometer  |
+| 1  | 4x4 Sparkfun Silicone ButtonPad   |
+| 2  | rotary knob  |
+| 1  | AT24C256 EEPROM |
+| 1  | optocouplert  |
+| 2  | 16ch Multiplexer  |
+| 16 | 5mm RGB Led common cathode  |
+| 2  | TRRS female 3.5" jack  |
+| 1  | pcb pushbutton  |
+| 4  | 4.7 Kohm resitor 1/4 watt  |
+| xx  | 10 Kohm resitor 1/4 watt  |
+| xx  | 470 ohm resitor 1/4 watt  |
+| xx  | diode  |
+
+## Assemble your hackpad ##
+
 ## TOP ##
 ![image](https://github.com/user-attachments/assets/e288fca4-f697-4060-9b64-c1b76c64db1e)
 ## MIDDLE FRAME ##
