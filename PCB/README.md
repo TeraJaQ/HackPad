@@ -27,6 +27,7 @@ Inside this folder, is possible to find the gerber file of all pcb used to build
 ## Assemble your HackPad ##
 ### ButtonPad PCB ###
 ![image](https://github.com/user-attachments/assets/80d77a02-432f-464f-8cc2-7f4b6f9943c2)
+
 Once we are sure we have all the components, we proceed to assemble the dedicated buttonpad pcb. We begin by placing an RGB LED on the upper side of the board, bearing in mind that the cathode is turned to the right, and making sure that all the pins of the LED come as close as possible to the PCB. Once the LED is inserted, bend its pins 90° and solder.
 Repeat this step for all 16 LEDs.
 
@@ -36,14 +37,22 @@ Repeat this step for all 16 LEDs.
 As the last step for this PCB we are going to solder some header pins 
 ### Main Bottom ###
 ![image](https://github.com/user-attachments/assets/55e97667-8b82-4d06-ae3f-fac0418f1053)
+
 We now take the HackPad motherboard and place the Arduino Pro micro board on the rear surface of the PCB, bearing in mind that we have the Arduino board's usb port covered by the HackPad motherboard.
 Once positioned, we proceed with welding.
+
 We continue by placing the two multiplexers at the rear of the PCB in the two appropriate slots in the centre of the board.
+
 We go on to placing all the resistors and diodes in the appropriate slots and also solder the components.
+
 Let now place and solder the two TRRS connectors on the front of the PCB
+
 Let us now go on to place and solder the Rotary encoder and potentiometer on the front of the PCB.
+
 We position and solder the push button at the top of the PCB, while at the rear of the board we solder a female pin header in the space provided.
+
 We position and solder the push button at the top of the PCB. In addition, at the contact points between this board and the button pad PCB we solder female pin headers for connection, and at the rear of the board we solder an additional female pin header in the space required for programming the Arduino Pro micro via an Arduino UNO.
+
 As a final step for this board, we solder 4 wires with a length of about 5cm onto the SDA, SCL, GND and +5v pins, which are needed to connect the motherboard to the display.
 
 ## TOP ##
