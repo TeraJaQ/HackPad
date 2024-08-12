@@ -62,7 +62,8 @@ As a final step for this board, we solder 4 wires with a length of about 5cm ont
 ## MAIN BOTTOM ##
 ![image](https://github.com/user-attachments/assets/55e97667-8b82-4d06-ae3f-fac0418f1053)
 
-## BOTTOM COVER ##
-![image](https://github.com/user-attachments/assets/cbe73366-7dc8-4e85-b933-7ff2ea239ac9)
+## BOTTOM ##
+![Schermata 2024-08-12 alle 19 06 46](https://github.com/user-attachments/assets/8d1f2d56-8978-4ec7-ac92-6ff36973ff75)
+
 
 
