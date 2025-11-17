@@ -31,9 +31,6 @@ Inside this folder, is possible to find the gerber file of all pcb used to build
 Once we are sure we have all the components, we proceed to assemble the dedicated buttonpad pcb. We begin by placing an RGB LED on the upper side of the board, bearing in mind that the cathode is turned to the right, and making sure that all the pins of the LED come as close as possible to the PCB. Once the LED is inserted, bend its pins 90° and solder.
 Repeat this step for all 16 LEDs.
 
-Once we are sure we have all the components, we proceed to assemble the dedicated buttonpad pcb. We begin by placing an RGB LED on the upper side of the board, bearing in mind that the cathode is turned to the right, and making sure that all the pins of the LED come as close as possible to the PCB. Once the LED is inserted, bend its pins 90° and solder.
-Repeat this step for all 16 LEDs.
-
 As the last step for this PCB we are going to solder some header pins 
 ### Main Bottom ###
 ![image](https://github.com/user-attachments/assets/55e97667-8b82-4d06-ae3f-fac0418f1053)
