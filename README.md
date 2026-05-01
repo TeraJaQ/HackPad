@@ -72,12 +72,12 @@ Through the OLED screen and the rotary encoder, it is possible to set:
 -	**The root note**
 - **The scale**
 -	**The Octave** ... *image not updated*.
--	Two different types of view/play with the scale (**Type A** or **Type B**).
+-	Two different types of view/play with the scale (**Chromatic** or **in-key**).
 These two different types of view/play consist of:
-#### Type A (didactics method) ####
+#### Type A (Chromatic) ####
 when this setting is enabled, the button pad grid turns on the led green for the root note and blue for all other notes in the scale. This helps us to learn how the notes of the chord are arranged on the 4x4 grid pad.
 <img width="886" alt="Schermata 2024-07-28 alle 16 04 26" src="https://github.com/user-attachments/assets/84ba0672-9b10-4779-aff1-24e130b4d071">
-#### Type B (compact view) ####
+#### Type B (in-key) ####
 All the pads will light up, green will represent the root notes and blue all the remaining notes of the scale. All notes not useful for the selected scale will be skipped. This will allow us to have more octaves available to move around on.
  
 <img width="889" alt="Schermata 2024-07-28 alle 15 57 23" src="https://github.com/user-attachments/assets/4b9f920a-b056-4f96-9735-3772822b761c">
