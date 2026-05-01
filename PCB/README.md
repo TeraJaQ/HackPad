@@ -16,12 +16,12 @@ Inside this folder, is possible to find the gerber file of all pcb used to build
 | 16 | 5mm RGB Led common cathode  |||
 | 2  | TRRS female 3.5" jack  |||
 | 1  | pcb pushbutton  |||
-| 4  | 4.7 Kohm resitor 1/4 watt  |||
-| 12 | M3 philips flat head screw Black  |||
+| 4  | 2,2 Kohm resitor 1/4 watt  |||
+| 12 | M3 philips flat head screw Black (12mm) |||
 | 8  | M3 PCB Nylon black plastic Phillips screw bolt  |||
 | 4  | PCB Nylon black plastic Phillips screw Female-Female pillar spacer  |||
-| xx | 10 Kohm resitor 1/4 watt  |||
-| xx | 470 ohm resitor 1/4 watt  |||
+| 5  | 10 Kohm resitor 1/4 watt  |||
+| 1  | 470 ohm resitor 1/4 watt  |||
 | xx | diode 1N4148  |||
 
 ## Assemble your HackPad ##
