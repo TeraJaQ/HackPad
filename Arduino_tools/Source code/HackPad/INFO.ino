@@ -37,7 +37,7 @@ ________________________________________________________________________________
   
   HackPad_new.ino
   Jacques Fargion - https://hackmidimask.com
-  13/05/2024
+  01/05/2026
 
   Development environment specifics:
   Developed in Arduino 1.8.12
