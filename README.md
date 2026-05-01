@@ -1,56 +1,117 @@
-# HackPad #
-## Open-source fully customizable midi controller based on Arduino ##
+# 🎛️ HackPad — Open‑Source MIDI Controller #
+## A fully customizable, Arduino‑powered performance controller ##
 <img width="929" alt="Schermata 2024-07-28 alle 16 30 40" src="https://github.com/user-attachments/assets/70da3d48-e6f4-4036-974b-973c1a4fbb56">
 
 
-This github holds Arduino source code, Arduino Pro Micro empty bootloader and GERBER files for the HackPad.
+HackPad is an open‑source, fully programmable MIDI controller designed for musicians, producers and performers who want a compact, expressive and deeply customizable instrument.
+Built around an Arduino Pro Micro, HackPad combines a 4×4 grid of pressure‑sensitive RGB pads, a rotary encoder, a potentiometer, an OLED display, and dual USB/TRS MIDI connectivity — all inside a robust, multi‑layer PCB chassis.
+Whether you use a DAW, a hardware synth, a drum machine or a groovebox, HackPad gives you a fast, tactile and portable way to control your setup.
 
-HackPad is a handmade portable midi controller based on Arduino and works with any DAW (Digital Audio Workstation) or synthesizer/drum machine/groove box. HackPad makes a fast and tactile experience to control your DAW or Synth/Drum Machine/Groove Box.
+### 📦 Technical Specifications ###
+| Component | Description |
+| --- | --- |
+|MCU|Arduino Pro Micro 5V / 16 MHz|
+|Pads	|16 pressure‑sensitive RGB pads (SparkFun silicone pad)|
+|LEDs	|16× RGB LEDs (common cathode)|
+|Multiplexers	|2× CD74HC4067 (16‑channel analog mux)|
+|Display	|0.96” OLED (SSD1306 or SH1106)|
+|Controls	|EC11 rotary encoder + 10k linear potentiometer|
+|Memory	|AT24C256 external EEPROM (201 banks)|
+|MIDI	|USB MIDI + TRS MIDI IN/OUT (Type A)|
+|Chaining	|Magnetic side connectors for power + MIDI|
+|Power	|USB 5V (1–3A recommended for TRS‑only use)|
+|Case	|Multi‑layer PCB body|
 
-## Key Features ##
-- A 4x4 grid of 16 RGB LED back-lit pressure sensitive pads
--	1 rotative potentiometer
--	Plug and play
-– USB bus-powered
-- Additional analog midi OUT via TRS Jack 3.5”
-- Additional analog midi IN via TRS Jack 3.5"
-- Compact and lightweight
-- Two modes: Keyboard and Custom
-- Endless possibilities for controlling your DAW or synth/drum machine/groove box
 
-HackPad is made for any software synth/drum machine/groove box that support midi communication (USB and/or TRS Midi 3.5 jack), to be used as a controller.
 
+### 🖼️ Hardware Overview ###
+#### Front Panel ####
 ![image](https://github.com/TeraJaQ/HackPad/assets/20156060/a0b1fb45-4ec8-4103-9f4e-53aea013592d)
-1.	Navigation Rotary Encoder with push button.
-2.	Potentiometer.
-3.	0.96” OLED display to manage the device.
-4.	4x4 Pad grid.
 
+• 4×4 RGB pressure‑sensitive pad grid
+
+• Rotary encoder with push button
+
+• 10k potentiometer
+
+• 0.96” OLED display
+
+#### Rear / side ####
 <img width="885" alt="Schermata 2024-07-28 alle 16 05 57" src="https://github.com/user-attachments/assets/3c1fb54d-8885-4022-872c-b09b388b6784">
 
-5.	Micro USB Socket (Midi IN & OUT).
+• USB Micro‑B port (MIDI IN/OUT + power)
+
+• TRS MIDI IN
+
+• TRS MIDI OUT
+
+• Magnetic connectors for chaining
+
+• External EEPROM
 
 <img width="885" alt="Schermata 2024-07-28 alle 16 07 17" src="https://github.com/user-attachments/assets/746b44ee-2636-46d4-9566-5c7bfa3d480f">
 
+### 🧠 Hardware Architecture ###
+HackPad is built from multiple stacked PCBs:
+1. Pad Layer
+
+  • Houses the SparkFun silicone pad
+
+  • Contains the RGB LEDs
+
+  • Pressure sensing is handled via analog multiplexing
+
+2. Logic Layer
+
+  • Arduino Pro Micro
+
+  • CD74HC4067 multiplexers
+
+  • EEPROM
+
+  • Optocoupler for MIDI IN
+
+  • TRS MIDI circuitry
+
+3. Display & Controls Layer
+
+  • OLED display
+
+  • Rotary encoder
+
+  • Potentiometer
+
+4. Base Layer
+
+  • Structural PCB
+
+  • Magnetic connectors
+
+  • Power routing
+
+This architecture makes HackPad extremely robust while keeping the design compact and modular.
 
 
-6.	Jack 3.5 Socket (Analog TRS Midi OUT) and Jack 3.5 Socket (Analog TRS Midi IN) ... *image not updated*.
-7.	External EEPROM – AT24C254 (where is possible to store the configurations).
-
-The body of this controller consists of multiple overlapping PCB boards, making it very robust.
-
-## Modes ##
-From the OLED screen with the support of the Rotary Encoder, is possible to choose two different modes of use.
-The modes available are:
--	**Keyboard.**
--	**Custom.**
-
-More over, if we boot the device by keeping pressed the rotary encoder, you can access to a config page, where is possible to select the first menu page (keyboard or custom), calibrate the sensitive pressure of each pad and the behavior of the analog midi (THRU or not). When you exit from the config page, all value will be stored in the EEPROM.
-
+### 🎹 Operating Modes ###
 ## Keyboard Mode ##
 <img width="884" alt="Schermata 2024-07-28 alle 16 10 23" src="https://github.com/user-attachments/assets/62b2c31f-ee86-41c0-8080-e6e1394dfa2f">
+Play the 4×4 grid as a chromatic keyboard.
 
-Allows you to play your HackPad’s grid as a chromatic keyboard. The lowest pitch is at the bottom, with the highest at the top. The pad grid is configured to play an entire octave of notes and the first four notes of the next octave. 
+The layout spans one full octave + four notes, with adjustable:
+
+• MIDI Channel
+
+• Octave
+
+• Velocity Min/Max
+
+• Dual‑channel Link Mode
+
+• Linked octave offset
+
+• Chord Finder
+
+The OLED screen always shows the active root note and octave.
 
 <img width="888" alt="Schermata 2024-07-28 alle 16 09 10" src="https://github.com/user-attachments/assets/3b03f037-98b0-435a-b4b1-ef6952af4b3c">
                                  
@@ -64,91 +125,120 @@ Through the OLED screen and the rotary encoder, it is possible:
 -	**Chord finder:** to enable a scale tutorial.
 -	**Back:** to go on the “Custom Mode”.
 
-## Sub-menu --> Chord finder ##
-From this menu, you can enable this function called *'Chord finder'*. This function, via the backlit pads, will allow us to activate a kind of tutorial on how to play different types of scales (50 in all). 
+## Chord finder ##
+
 <img width="890" alt="Schermata 2024-07-28 alle 15 47 28" src="https://github.com/user-attachments/assets/11096679-a128-43ea-820b-4632bb9e8114">
 
-Through the OLED screen and the rotary encoder, it is possible to set:
--	**The root note**
-- **The scale**
--	**The Octave** ... *image not updated*.
--	Two different types of view/play with the scale (**Chromatic** or **in-key**).
-These two different types of view/play consist of:
-#### Type A (Chromatic) ####
-when this setting is enabled, the button pad grid turns on the led green for the root note and blue for all other notes in the scale. This helps us to learn how the notes of the chord are arranged on the 4x4 grid pad.
+A built‑in visual scale tutor with 50 musical scales.
+
+Two visualization modes:
+
+#### Type A -  **Chromatic View** ####
+
+• Pads show all notes
+
+• Green = root, blue = scale notes
+
 <img width="886" alt="Schermata 2024-07-28 alle 16 04 26" src="https://github.com/user-attachments/assets/84ba0672-9b10-4779-aff1-24e130b4d071">
-#### Type B (in-key) ####
-All the pads will light up, green will represent the root notes and blue all the remaining notes of the scale. All notes not useful for the selected scale will be skipped. This will allow us to have more octaves available to move around on.
+
+#### Type B — **In‑Key View** ####
+
+• Only scale notes are shown
+
+• Pads span multiple octaves
+
+You can keep the visualization active while returning to Keyboard Mode.
  
 <img width="889" alt="Schermata 2024-07-28 alle 15 57 23" src="https://github.com/user-attachments/assets/4b9f920a-b056-4f96-9735-3772822b761c">
 
-- **keep on** to go back in the previous menu and keep led and pad behaviours
-- **Back** to go back in the previous menu, turn off leds and reset the chromatic keyboard mode.
-
-Once the root note and scale have been chosen, it will be possible to select the **'keep on'** option to keep the LEDs on and return to keyboard mode to continue changing the keyboard parameters (midi channel, octave, velocity…).
-Now in the keyboard mode screen, the chosen root note is also displayed.
 
 ## Custom Mode ##
-In this mode, the midi settings for each button pad can be changed individually and is also possible to configure the parameter for the potentiometer.
-
  <img width="885" alt="Schermata 2024-07-28 alle 15 58 25" src="https://github.com/user-attachments/assets/c65d7b32-646f-4093-b448-d9d4747682d5">
 
-On this screen we will find the following items:
--	**Bank:** where are stored the configuration for the 4x4 grid pad and for the potentiometer (is it possible to store 201 Bank).
--	**Btn / Pot:** where you can select a pad or potentiometer to be edit.
--	**Channel:** where you can set the midi channel for the selected pad or potentiometer.
--	**Note:** where you can select the note for the selected pad or potentiometer.
--	**Velocity Min:** to set the minimum value for the minimum intensity touch on the pad or the minimum value for the potentiometer.
--	**Velocity Max:** to set the maximum value for the maximum intensity touch on the pad or the maximum value for the potentiometer.
--	**Momentary / Toggle / CC:** to set one of three behavior modes (for pads only).
--	**Copy:** to copy the settings of a button into another pad.
--	**Swap:** to switch the settings of a pad with another button.
--	**Link:** (to link one pad to another) this will allow us to play the two pads simultaneously (it is also possible to link this second pad to another … and so on).
--	**Save:** to save the configuration of 4x4 grid pads and the potentiometer into a specific bank number
--	**Back:** return to the Keyboard mode.
+Design your own MIDI controller layout.
+Every pad and the potentiometer can be configured individually.
+Editable parameters:
 
-Selecting the *Bank* item and turning the rotary encoder will select a different bank, which will change the settings of the entire grid pad and the potentiometer. In addition, again using the Bank item, it is possible to select the ‘reset’ item which will set the pads as we left them in keyboard mode (including Chord finder mode).
+• Bank (201 available)
 
-If *‘Button’* is chosen, the selected pad will light up blue. This will also be the case when modifying an other parameter to highlight which button we are making changes on.
-Selecting the *‘Copy’* item, the selected pad will be used as a reference and will also light up red to indicate where it will be copied. Turning the rotary encoder will select the destination pad and pressing the rotary encoder button will confirm copying.
+• Pad / Pot selection
 
-Through the *‘Swap’* item it will be possible to move the configuration of a button to another position on the grid pad.
+• MIDI Channel
 
-The *‘Link’* function will allow the action performed on one pad to be linked to another key on the grid pad. The second key can be also linked to a different key.
+• Note / CC number
 
-As soon as we make a change, the *‘Save’* item will be highlighted to remind us to save the settings (if we wish to do so).
-By selecting *‘Save’*, we can decide to save to the same bank where we are working on, or alternatively save to a different bank (the HackPad has 201 banks available).
+• Velocity Min/Max
 
-## Potentiometer ##
-On both methods, the behavior of the potentiometer is defined in CUSTOM mode.
+• Pad behavior: Momentary / Toggle / CC
 
-## Midi Output Lighting ##
-The HackPad has been programmed in such a way that if it hears the same note and same midi channel coming from one of its pads, it will be lit if it hears this note active. Once it hears this note, it will switch off its LED accordingly.
+• Copy
 
-## Midi TRS Jack & magnetic connectors ... ##
-The HackPad is also equipped with an analog midi output and midi through the two 3.5 jack (located on the left side of the device). This allows us to use this controller with devices that only support this type of connection. The behavior can be selected, via the config menu and it is possibile to define this port as thru or not.
-To connect a midi device via this port you need a TRS-MIDI Type A cable.
-Should you wish to use the HackPad exclusively via the TRS Midi Jack connection, it is necessary to power the HackPad via the micro-USB port with a power bank or with a classic USB charger (minimum 5v 1A, maximum 5V 3A).
-By placing two or more HackPads side by side, they can communicate with each other by exchanging midi messages, thanks to the magnetic connectors on the sides. This will allow us, for example, to connect our first HackPad via USB to our DAW (or other), and by placing the second HackPad next to the first, it will power itself and be able to send/receive midi messages to the other connected devices.
+• Swap
+
+• Link
+
+• Save
+
+Selecting a pad highlights it with LEDs for clear visual feedback.
 
 
-## Panic! ##
-Don't worry, if some note keep on when you play and edit parameter, Hold down the rotary encoder button to end all active notes.
+## 🔧 Configuration Menu ##
+Hold the encoder during power‑up to access:
+• Default startup mode (Keyboard or Custom)
+• Pad pressure calibration (per‑pad sensitivity)
+• TRS MIDI behavior (THRU or standard OUT)
+All settings are stored in EEPROM.
 
-## Set the default main page ##
-In addition, is it possible to change the HackPad's main screen between Keyboard Mode or Custom Mode by holding down the rotary encoder button during power-up and set via this config menu page. These setting will be automatically stored within the device.
+## 🎛️ MIDI Implementation ##
+### USB MIDI ###
 
-## Calibration of the pad ##
-In addition, is it possible to calibrate the pressure sensitive of each pad by holding down the rotary encoder button during power-up and set via this config menu page. These setting will be automatically stored within the device.
+• Class‑compliant
 
-# Build your Hackpad !!! #
-## Hardware ##
+• Works with any DAW or hardware supporting USB MIDI
 
+### TRS MIDI ###
+
+• TRS Type A
+
+• MIDI IN
+
+• MIDI OUT
+
+• Optional MIDI THRU
+
+### LED Feedback ###
+HackPad listens to incoming MIDI messages.
+If it receives a note matching one of its pads:
+
+• The pad lights up while the note is active
+
+• LED turns off when the note ends
+
+### Chaining Multiple HackPads ###
+Magnetic connectors allow:
+
+• Shared power
+
+• MIDI communication
+
+• Modular multi‑controller setups
+
+## 🛠️ Build Your HackPad ##
 ### PCBs ###
 [Here](https://github.com/TeraJaQ/HackPad/tree/d808f625406d060a4fe85b35d44777ac2a44a53d/PCB) you can find the GERBER files of all the pcb boards used for this project
+All GERBER files are available in the /PCB directory.
+Required Components
 
-### Components ###
-Also you need some hardware componets to start bulding the HackPad
+
+
+
+
+
+
+
+
+
+### Required Components ###
 
 - N°1 Arduino Pro micro 5v 16MHz [link](https://it.aliexpress.com/item/1005005074893953.html?spm=a2g0o.order_list.order_list_main.160.46733696P8Ga6q&gatewayAdapt=glo2ita)
 - N°2 CD74HC4067 (16 Channel Analog Multiplexer) [link](https://it.aliexpress.com/item/1005003157392356.html?spm=a2g0o.order_list.order_list_main.155.46733696P8Ga6q&gatewayAdapt=glo2ita)
@@ -170,17 +260,38 @@ Also you need some hardware componets to start bulding the HackPad
 - N°4 silicone feet
 - N°1 Arduino UNO *(needed to upload the HackPad Arduino code to the Arduino Pro Micro board)*
 
-## Software ##
-##### Prerequisite:
-To upload the code in the Arduino board is needed to have Arduino IDE version 1.8.12 (for [Mac](https://downloads.arduino.cc/arduino-1.8.12-macosx.zip) for [Win](https://downloads.arduino.cc/arduino-1.8.12-windows.zip) ) also you need to have download and copied in the hardware folder the provided [HackMidiMask_HackPad](https://github.com/TeraJaQ/HackPad/blob/3560372e49aeeb965b1748fd1811149483b62c2a/Arduino_tools/HackMidiMask_HackPad.zip) bootloader and in the library folder the [library](https://github.com/TeraJaQ/HackPad/blob/3560372e49aeeb965b1748fd1811149483b62c2a/Arduino_tools/Libraries.zip) needed.
-To upload the code you also need one Arduino UNO first of all to burn the Arduino Pro micro with an HackMidiMask_HackPad bootloader and also to upload the two Arduino code.
+## 💻 Software Setup ##
+##### Prerequisites #####
+- Arduino IDE 1.8.12 (for [Mac](https://downloads.arduino.cc/arduino-1.8.12-macosx.zip) for [Win](https://downloads.arduino.cc/arduino-1.8.12-windows.zip) )
+- Custom bootloader [HackMidiMask_HackPad](https://github.com/TeraJaQ/HackPad/blob/3560372e49aeeb965b1748fd1811149483b62c2a/Arduino_tools/HackMidiMask_HackPad.zip)
+- Required libraries [library](https://github.com/TeraJaQ/HackPad/blob/3560372e49aeeb965b1748fd1811149483b62c2a/Arduino_tools/Libraries.zip)
 
-## License ##
+##### Upload Process #####
+1. Use an Arduino UNO to burn the custom bootloader
+2. Upload the two firmware files
+3. Reassemble and enjoy
 
-Copyright (C) 2024 Jacques Fargion <terajack@gmail.com>
+## 🗺️ Roadmap ##
+• Add aftertouch emulation
+• Add per‑pad color customization
+• Add CC mode for the pad grid
+• Add step‑sequencer mode
+• Add SysEx configuration tool
+• Add web‑based editor (via WebMIDI)
+• Add multi‑HackPad synchronization features
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published by the Free Software Foundation.
+## 🙌 Credits ##
+Project Lead & Creator
+• Jacques Fargion (Ja‑Q) — Hardware, firmware, design
+Special Thanks
+• SparkFun (silicone pad inspiration)
+• Arduino community
+• Open‑source contributors
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License version 2 for more details.
+## 📄 License ##
+HackPad is released under the GNU GPL v3.
+You are free to use, modify and redistribute the project under the terms of this license.
 
-You should have received a copy of the GNU General Public License version 3 along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+## 🎉 HackPad is yours — build it, customize it, hack it ##
+This project exists to give musicians and makers a powerful, open and fully customizable MIDI controller.
+Whether you want a compact performance tool, a programmable controller for your DAW, or a platform to experiment with new ideas, HackPad is designed to grow with you.
