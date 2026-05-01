@@ -33,7 +33,7 @@ Repeat this step for all 16 LEDs.
 
 As the last step for this PCB we are going to solder some header pins 
 ### Main Bottom ###
-![image](https://github.com/user-attachments/assets/55e97667-8b82-4d06-ae3f-fac0418f1053)
+<img width="1576" height="1796" alt="image" src="https://github.com/user-attachments/assets/84ab7adf-ac4e-40b9-b21d-7f08e179cc24" />
 
 We now take the HackPad motherboard and place the Arduino Pro micro board on the rear surface of the PCB, bearing in mind that we have the Arduino board's usb port covered by the HackPad motherboard.
 Once positioned, we proceed with welding.
@@ -56,8 +56,6 @@ As a final step for this board, we solder 4 wires with a length of about 5cm ont
 ![image](https://github.com/user-attachments/assets/e288fca4-f697-4060-9b64-c1b76c64db1e)
 ## MIDDLE FRAME ##
 ![image](https://github.com/user-attachments/assets/daf9bd3d-9c61-4af8-ba20-f7502f2c3de7)
-## MAIN BOTTOM ##
-![image](https://github.com/user-attachments/assets/55e97667-8b82-4d06-ae3f-fac0418f1053)
 
 ## BOTTOM ##
 ![Schermata 2024-08-12 alle 19 06 46](https://github.com/user-attachments/assets/8d1f2d56-8978-4ec7-ac92-6ff36973ff75)
