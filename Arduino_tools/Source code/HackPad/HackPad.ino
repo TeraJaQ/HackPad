@@ -220,6 +220,11 @@ void setup() {
   Wire.setClock(400000);
   Wire.beginTransmission(EEPROM_I2C_ADDRESS);
   error = Wire.endTransmission();
+  // Handler espliciti: necessari perché con turnThruOff()
+  // MIDI.read() processa i messaggi solo se c'è almeno un handler registrato
+  MIDI.setHandleNoteOn ([](byte ch, byte note, byte vel) {});
+  MIDI.setHandleNoteOff([](byte ch, byte note, byte vel) {});
+  MIDI.setHandleControlChange([](byte ch, byte num, byte val) {});
   MIDI.begin(MIDI_CHANNEL_OMNI);
   setuppins();
   screen();
@@ -241,23 +246,24 @@ void loop() {
 }
 
 void processMIDI() {
-  // DIN → USB: legge tutti i messaggi disponibili in coda (loop, non solo uno)
+  // DIN IN → USB + DIN OUT (thru)
   while (MIDI.read()) {
-    byte type  = MIDI.getType();
-    byte data1 = MIDI.getData1();
-    byte data2 = MIDI.getData2();
-    byte ch    = MIDI.getChannel() - 1;  // 0-based per status byte
-    // getType() restituisce il tipo senza canale (es. 0x90) — aggiunge il canale
-    sendUSBMessage(type | ch, data1, data2);
+    byte type   = MIDI.getType();
+    byte data1  = MIDI.getData1();
+    byte data2  = MIDI.getData2();
+    byte ch     = MIDI.getChannel() - 1;
+    byte status = type | ch;
+    sendUSBMessage(status, data1, data2);   // sempre: DIN→USB
+    if (midiThru) sendMIDIMessage(status, data1, data2);  // se thru on: DIN→DIN
+    onNote(status, data1, data2);           // aggiorna LED
   }
-  // USB → DIN: legge tutti i messaggi USB in coda
+  // USB IN → DIN OUT (thru)
   midiEventPacket_t rx;
   do {
     rx = MidiUSB.read();
     if (rx.header != 0) {
       onNote(rx.byte1, rx.byte2, rx.byte3);
-      // Inoltra su DIN solo se midiThru è attivo
-      if (midiThru) sendMIDIMessage(rx.byte1, rx.byte2, rx.byte3);
+      if (midiThru) sendMIDIMessage(rx.byte1, rx.byte2, rx.byte3);  // USB→DIN
     }
   } while (rx.header != 0);
 }
@@ -275,7 +281,6 @@ void setuppins() {
   if (error == 0) {
     for (byte a = 0; a < NUM_OF_BTN; a++) btnCAL[a] = read2Bytes(EEPROM_BTN_CAL_BASE + (a * 2));
     midiThru = readEEPROM(eepromMidiThru) ? 1 : 0;
-    // Thru DIN→DIN: disabilitato — il routing è gestito manualmente in processMIDI
     MIDI.turnThruOff();
     if (readEEPROM(EEPROM_BOOT_MENU) <= 2) {
       load_from_external_EEPROM();
@@ -464,7 +469,6 @@ void scanRotEncBtn() {
         else if ((selected_menu >= SETTINGS_BUTTON) && (selected_menu <= SETTINGS_SENSITIVE)) selected_menu = 4;
         else if ((selected_menu >= KEYBOARD_MIDI_CH) && (selected_menu <= KEYBOARD_LINK_OCTAVE)) selected_menu = 1;
         else if ((selected_menu >= CUSTOM_BANK) && (selected_menu <= CUSTOM_SAVE)) {
-          // FIX 2: after copy/swap, selBTN moves to destination pad
           if (selected_menu == CUSTOM_COPY) { copy((index_destination-1),(index_selBTN_menu-1)); emptyRGBleds(); index_selBTN_menu = index_destination; }
           else if (selected_menu == CUSTOM_SWAP) { swap((index_destination-1),(index_selBTN_menu-1)); emptyRGBleds(); index_selBTN_menu = index_destination; }
           else if (selected_menu == CUSTOM_LINK) {
